@@ -1,0 +1,83 @@
+<!-- Types of Selector -->
+<!-- 1 simple Selector
+2 combinator Selector
+3 pseduo class Selector
+4 Psedo element Selector
+5 Attribute Selector -->
+
+
+<!-- For Combination Selector
+1. Descendent Selector
+2. Child Selector
+3. Adjacent sibling Selector (+,~)
+4. Genereal Sibling Selector -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* p{
+    text-align: center;
+} */
+
+.Class1{
+    text-align: center;
+}
+
+/* h1,
+.Class1
+{
+    text-align: center;
+    color:brown;
+} */
+
+/* descendent selector */
+/* div p{
+    background-color: aqua;   
+}
+div > p{
+    background-color: bisque;
+
+    /* the direct child will be of this colorur */
+
+    /* Adjacent selector */
+div ~ p:hover{
+    background-color: rgb(44, 125, 196);
+}
+h3::first-letter{
+    color: rgb(196, 44, 163);
+}
+a[target]{
+    background-color: cadetblue;
+}
+</style>
+<body>
+<h1>This is heading</h1>
+<div>
+<p class="Class1">
+   This is <u>Isha Verma</u>, <br>
+   Lives in <span style="color: red;">Ludhiana</span> 
+</p>
+
+    <section>
+        <p>This is 2nd paragraph</p>
+    </section>
+</div>
+
+<p>Para 3 this is outside the div tag and it will be the Adjacent to div</p>
+<p>Para 4 this is outside the div tag and it will be the Adjacent siblings to div</p>
+<h3>This is heading 3</h3>
+<div>
+    <a href="https://cipherschools.com" target="_blank">cipherschools</a>
+</div>
+</body>
+</html>

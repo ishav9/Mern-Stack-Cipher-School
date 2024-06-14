@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <!-- <h1 onclick="this.innerHTML=`this is after click`">my page title</h1> --> 
+         <!-- OR -->
+     <h1 onclick="changetext(this)">Click me !</h1>
+        <article class="firsta">
+            <h2>list of amazing fruits</h2>
+            <div class="wrapper1">
+                <ul class="applelist">
+                    <li class="apple">apple</li>
+                    <li class="orange">orange</li>
+                    <li class="grape">
+                        grape
+                  
+                
+                <ul>
+                    <li class="type1">moon drops</li>
+                    <li>sultana</li>
+                    <li>concord</li>
+                    <li>crimson seedless</li>
+                </ul>
+            </li>
+            <li class="banana">bananas</li>
+        </ul>
+        <button class="btn">read full list</button>
+            </div>
+            <div>
+                <button onclick="displayDate()"> time is :</button>
+                <p id="demo"></p>
+            </div>
+        </article>
+        <h4>Enter your name and it will be converted into uppercase</h4>
+        <input type="text" name="" id="firstname" onchange="upperCase()">
+
+
+  <h1>mouse over and mouseout</h1>
+  <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: rgb(151, 58, 58); width: 120px; height: 20px; padding:40px">
+    mouse over me.
+  </div>
+
+  <h1>mouseDown and mouseUp</h1>
+  <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color: rgb(58, 97, 151); width: 120px; height: 20px; padding:40px">
+    mouse over me.
+  </div>
+    </main>
+
+
+    <script>
+        function changetext(id){
+            id.innerHTML= "this is after clcik"
+        }
+        function displayDate(){
+            document.getElementById("demo").innerHTML = new Date();
+        }
+        function upperCase(){
+            const x = document.getElementById("firstname");
+            x.value = x.value.toUpperCase();
+        }
+        function mOver(obj){
+            obj.innerHTML = "Thank you";
+        }
+        function mOut(obj){
+            obj.innerHTML = "mouse over me.";
+        }
+        function mDown(obj){
+            obj.style.backgroundColor ="cyan";
+            obj.innerHTML = "release me!";
+        }
+        function mUp(obj){
+            obj.style.backgroundColor ="blue";
+            obj.innerHTML = "Thank You!";
+        }
+    </script>
+</body>
+</html>
