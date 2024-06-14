@@ -1,0 +1,48 @@
+MERN - MongoDB + Express + React + Node
+// MongoDB is the database
+// Express is a library
+// react is a frontend part
+// node is the environment for the development
+
+// user <--> SERVER(react) <--> BACKEND-SERVER(node+Express) <--> DB(MongoDB)cd
+
+npx create-react-app firstapp
+cd firstapp
+npm start
+
+package.json contains all the scripts and dependencies currently present in our program
+
+
+public folder wil have all the static files of our web application
+
+react is a spa SINGLE PAGE APPLICATION 
+
+SRC folder will contain css files, test, js files
+
+
+jsx -JAVASCRIPT XML
+1.JSK looks and behaves like HTML
+2. JSX can contain 2 things
+HTML tags
+React components
+
+3. JSK allows us to write JS code inside
+
+// COMPONENTS 
+1. some logic
+2. some ui code
+
+1. react components are like functions
+2. they contain some logical code and return some ui
+3. just like function, they accept arguments that can control the UI/logic of the components
+4. Rendering a component is like calling  function
+
+In react, a component can be represented by a JS class or JS function
+
+// INDEX.JS file is the real file which is Rendering the App.js file
+// SO in INDEX.JS file u can call </APP> as many times u want the content to be displayed on the screen
+
+// CDN stands for content Distribution Network
+A content delivery network (CDN) is a network of interconnected servers that speeds up webpage loading for data-heavy applications.
+
+// use className instead of class in react

@@ -1,0 +1,6 @@
+// import the style tag from semantic ui to index.css
+@import url(https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css);
+
+// import another style tag to index.html in public so that it can be accessible to everyone
+   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+   
