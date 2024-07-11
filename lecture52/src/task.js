@@ -1,0 +1,90 @@
+import { useContext, useState } from "react";
+import TaskContext from "../context/TaskContext";
+import { formatDate } from "../utils/DateUtil";
+const Task = ({task:incomingTask}) =>{
+  const  {title, description, createDate, taskId} = incomingTask;
+    // (props)
+    // return <h6>Task</h6>
+    // console.log(props);
+    const {deleteTask, editTask} = useContext(TaskContext); 
+    const [isEditing, setIsEditing] = useState(false); // if true then it is getting edited
+    const [task, setTask] = useState(incomingTask);
+    
+    const handleInputChange = (e) => {
+      setTask({
+          ...task, [e.target.name]: e.target.value,
+      });
+  }
+
+    if(isEditing){
+      return(
+        <div className="card">
+        <div className="content">
+      <div className="ui form">
+        <div className="field">
+                        <label>Title</label>
+                        <input
+                            type="text"
+                            spellCheck={false}
+                            placeholder="Task Title"
+                            name="title"
+                            onChange={handleInputChange}
+                            value = {task.title}
+                        />
+                    </div>
+          <div className="meta">
+           {/* {createDate.toLocaleTimeString()} */ formatDate(createDate)}
+          </div>
+          <div className="field">
+                        <label>Description</label>
+                        <textarea
+                            rows="2"
+                            spellCheck={false}
+                            placeholder="Description"
+                            name="description"
+                            onChange={handleInputChange}
+                            value = {task.description}
+                        ></textarea>
+                    </div>
+
+                    </div>
+        </div>
+        <div className="extra content">
+          <div className="ui two buttons">
+            <div className="ui basic green button" onClick={()=> {
+              
+              editTask(task)
+              setIsEditing(false);
+              }}>Save</div>
+            <div className="ui basic red button" onClick={()=> setIsEditing(false)}>Cancel</div>
+          </div>
+        </div>
+      </div>
+      )
+    }else{
+    return (
+        <div className="card">
+        <div className="content">
+         
+          <div className="header">
+          {title}
+          </div>
+          <div className="meta">
+           {/* {createDate.toLocaleTimeString()} */ formatDate(createDate)}
+          </div>
+          
+          <div className="description">
+                {description}
+          </div>
+        </div>
+        <div className="extra content">
+          <div className="ui two buttons">
+            <div className="ui basic green button" onClick={()=>setIsEditing(true)}>Edit</div>
+            <div className="ui basic red button" onClick={()=> deleteTask(taskId)}>Delete</div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+};
+export default Task;
